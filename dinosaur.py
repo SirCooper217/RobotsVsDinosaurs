@@ -1,4 +1,4 @@
-class dinosaur:
+class Dinosaur:
     def __init__(self, name, attack_power):
         self.name= " "
         self.attack_power= [ ]
@@ -6,4 +6,3 @@ class dinosaur:
 
     def attack(self, robot):
         pass
-    

@@ -1,6 +1,6 @@
 from weapon import Weapon 
 
-class robot:
+class Robot:
     def __init__(self, name):
         self.name= " "
         self.health= [ ]
