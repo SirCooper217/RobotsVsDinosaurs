@@ -1,3 +1,5 @@
+from weapon import Weapon 
+
 class robot:
     def __init__(self, name):
         self.name= " "
