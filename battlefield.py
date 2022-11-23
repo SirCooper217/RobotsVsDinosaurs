@@ -3,7 +3,7 @@ from robot import Robot
 
 class Battlefield:
     def __init__(self):
-        self.dinosaur= Dinosaur("Randy", 15)
+        self.dinosaur= Dinosaur("Randy", 35)
         self.robot= Robot("Tobot")
         pass
 
