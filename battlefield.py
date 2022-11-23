@@ -17,12 +17,20 @@ class Battlefield:
         print("\nIt's a GOD DANG Dinosaur vs Robot fight! \nLet's get ready to RUMBLLLLLE\n")
 
     def battle_phase(self):
-       while self.dinosaur.health> 0 and self.robot.health> 0:
-        self.dinosaur.attack(self.robot)
-        print("\nDino attacks Robo for" {self.dinosaur.attack_power} "damage! \n Robo has" {self.robot.health} "remaining!")
-        self.robot.attack(self.dinosaur)
-        print("\nRobo attacks Dino for" {self.robot.active_weapon.attack_power} "damage! \n Dino has" {self.dinosaur.health} "remaining!")
+        while self.dinosaur.health> 0:
+            self.dinosaur.attack(self.robot)
+            print(f"\nDino attacks Robo for {self.dinosaur.attack_power} damage! \n Robo has {self.robot.health} remaining!")
+            if self.robot.health> 0:
+                self.robot.attack(self.dinosaur)
+                print(f"\nRobo attacks Dino for {self.robot.active_weapon.attack_power} damage! \n Dino has {self.dinosaur.health} remaining!")
+        if self.dinosaur.health<= 0:
+            self.winner= self.robot
+            print("Robo time")
+        else:
+            self.winner= self.dinosaur
+            print("Dino time")
         pass
 
     def display_winner(self):
+        print("\nIt's a GOD DANG Dinosaur vs Robot fight! \nAnd it looks like {self.winner} wins!\n")
         pass
